@@ -1,0 +1,76 @@
+left turn
+==========
+  x: 0.5
+  y: 0.0
+  z: 0.0
+angular: 
+  x: 0.0
+  y: 0.0
+  z: 1.0
+
+
+right turn
+==========
+linear: 
+  x: 0.5
+  y: 0.0
+  z: 0.0
+angular: 
+  x: 0.0
+  y: 0.0
+  z: -1.0
+
+
+
+
+cr-lab-tu@crlabtu-HP-Z800-Workstation:~$ rostopic echo /move_base_simple/goal
+header: 
+  seq: 0
+  stamp: 
+    secs: 1423758942
+    nsecs: 117155681
+  frame_id: /map
+pose: 
+  position: 
+    x: 0.479086518288
+    y: -2.08086013794
+    z: 0.0
+  orientation: 
+    x: 0.0
+    y: 0.0
+    z: 0.0
+    w: 1.0
+---
+
+
+^Ccr-lab-tu@crlabtu-HP-Z800-Workstation:~$ rostopic echo /move_base/goal
+header: 
+  seq: 0
+  stamp: 
+    secs: 1423758942
+    nsecs: 117683147
+  frame_id: ''
+goal_id: 
+  stamp: 
+    secs: 0
+    nsecs: 0
+  id: ''
+goal: 
+  target_pose: 
+    header: 
+      seq: 0
+      stamp: 
+        secs: 1423758942
+        nsecs: 117155681
+      frame_id: /map
+    pose: 
+      position: 
+        x: 0.479086518288
+        y: -2.08086013794
+        z: 0.0
+      orientation: 
+        x: 0.0
+        y: 0.0
+        z: 0.0
+        w: 1.0
+

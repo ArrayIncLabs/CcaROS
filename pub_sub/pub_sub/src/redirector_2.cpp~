@@ -1,0 +1,26 @@
+#include "ros/ros.h"
+#include "std_msgs/String.h"
+
+//2. recieves message of laserscan type
+void chatterCallback(const sensor_msgs::LaserScan::ConstPtr& msg)
+{
+    ROS_INFO("I heard: [%s]", msg->seq); // 3.prints sequence number of scan
+}
+
+int main(int argc, char **argv)
+{
+    ros::init(argc, argv, "redirector");
+    ros::NodeHandle n;
+   //1. add message type sensor_msgs::LaserScan to subbscriber
+    ros::Subscriber sub = n.subscribe<sensor_msgs::LaserScan>("lms200", 1000, chatterCallback); 
+
+    ros::spin();
+    return 0;
+}
+
+
+
+
+
+
+//ROS_INFO("Got a transform! x = %f, y = %f",transform.getOrigin().x(),transform.getOrigin().y())

@@ -1,0 +1,8 @@
+<launch>
+  <node pkg="pub_sub" type="robo_pos" respawn="false" name="robo_pos"></node>
+  <node pkg="pub_sub" type="robo_dir_pub" respawn="false" name="robo_dir_pub"></node>
+  <node pkg="pub_sub" type="strategy_pub" respawn="false" name="strategy_pub"></node>
+  <node pkg="pub_sub" type="switcher" respawn="false" name="switcher"></node>
+  <node pkg="pub_sub" type="obstacles" respawn="false" name="obstacles"></node>
+</launch>
+

@@ -1,0 +1,29 @@
+#include "ros/ros.h"
+#include "sensor_msgs/LaserScan.h"
+
+void chatterCallback(const sensor_msgs::LaserScan::ConstPtr& msg)
+{
+    ROS_INFO(" Sequence : [%d]", msg->header.seq);
+    ROS_INFO("angle_min : [%f]", msg->header.angle_min);
+    ROS_INFO("angle_max : [%f]", msg->header.angle_max);
+    //ROS_INFO("Sequence no: [%d]", msg->header.seq);
+}
+
+int main(int argc, char **argv)
+{
+    ros::init(argc, argv, "obstacles");
+    ros::NodeHandle n;
+    ros::Subscriber sub = n.subscribe<sensor_msgs::LaserScan>("scan", 1000, chatterCallback); 
+    ros::spin();
+    return 0;
+}
+
+
+
+
+
+
+
+
+
+//ROS_INFO("Got a transform! x = %f, y = %f",transform.getOrigin().x(),transform.getOrigin().y())
